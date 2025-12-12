@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, Phone, Mail, MapPin, Clock, Truck, Shield, Slice, IndianRupee } from 'lucide-react';
-import TokkriLogo from "./assets/tokkri.jpg";
+import TokkriLogo from "./assets/tokkri_3d_logo.PNG";
+import TokkriTransparentLogo from "./assets/tokkri_icon_transparent.ico";
 const App = () => {
   const [timeLeft, setTimeLeft] = useState({
     days: 30,
@@ -119,9 +120,18 @@ const App = () => {
       {/* Body */}
       <main className="flex-grow">
         {/* Coming Soon Section */}
-        <section className="py-12 sm:py-16 lg:py-20 px-4">
+        <section className="pt-2 pb-12 sm:pt-3 sm:pb-16 lg:pt-4 lg:pb-20 px-4">
+
           <div className="max-w-4xl mx-auto text-center">
+            <div className="flex justify-center items-center ">
+      <img
+        src={TokkriTransparentLogo} 
+        alt="TOKKRI Logo"
+        className=" h-auto object-contain"
+      />
+    </div>
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-4">
+              
               Coming Soon
             </h2>
             <p className="text-lg sm:text-xl text-gray-600 mb-8 sm:mb-12">
