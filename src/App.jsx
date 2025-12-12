@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, Phone, Mail, MapPin, Clock, Truck, Shield, Scissors, DollarSign } from 'lucide-react';
-
+import TokkriLogo from "./assets/tokkri.jpg";
 const App = () => {
   const [timeLeft, setTimeLeft] = useState({
     days: 30,
@@ -99,13 +99,16 @@ const App = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
-              <div className="bg-red-600 text-white p-2 rounded-lg">
-                <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/>
-                </svg>
-              </div>
+              <div className="bg-red-600 text-white rounded-lg">
+  <img 
+    src={TokkriLogo} 
+    alt="Tokkri Logo" 
+    className="w-12 h-12 object-contain"
+  />
+</div>
+
               <div>
-                <h1 className="text-xl sm:text-2xl font-bold text-gray-900">FreshChicken</h1>
+                <h1 className="text-xl sm:text-2xl text-red-600 font-bold">TOKKRI</h1>
                 <p className="text-xs sm:text-sm text-gray-600">Premium Quality Delivered</p>
               </div>
             </div>
@@ -224,7 +227,7 @@ const App = () => {
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-8">
             <div>
-              <h4 className="font-bold text-lg mb-4">FreshChicken</h4>
+              <h4 className="font-bold text-lg mb-4">TOKKRI</h4>
               <p className="text-gray-400 text-sm">
                 Premium quality chicken delivered fresh to your doorstep
               </p>
@@ -236,8 +239,8 @@ const App = () => {
                 <div className="flex items-start space-x-3">
                   <Phone className="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" />
                   <div>
-                    <p>+91 98765 43210</p>
-                    <p>+91 87654 32109</p>
+                    <p>+91 9044521514</p>
+                   
                   </div>
                 </div>
               </div>
@@ -249,8 +252,8 @@ const App = () => {
                 <div className="flex items-start space-x-3">
                   <Mail className="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" />
                   <div>
-                    <p>info@freshchicken.com</p>
-                    <p>support@freshchicken.com</p>
+                    <p>alam13.shahbaz@gmail.com</p>
+                  
                   </div>
                 </div>
               </div>
@@ -261,16 +264,16 @@ const App = () => {
               <div className="flex items-start space-x-3 text-sm">
                 <MapPin className="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" />
                 <p className="text-gray-400">
-                  123 Market Street<br />
-                  Lucknow, Uttar Pradesh<br />
-                  India - 226001
+                 
+                  Kanpur, Uttar Pradesh<br />
+                  India - 208025
                 </p>
               </div>
             </div>
           </div>
 
           <div className="border-t border-gray-800 pt-6 sm:pt-8 text-center text-sm text-gray-400">
-            <p>&copy; 2024 FreshChicken. All rights reserved.</p>
+            <p>&copy; 2025 FreshChicken. All rights reserved.</p>
           </div>
         </div>
       </footer>
