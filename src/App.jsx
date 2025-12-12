@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight, Phone, Mail, MapPin, Clock, Truck, Shield, Scissors, DollarSign } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Phone, Mail, MapPin, Clock, Truck, Shield, Slice, IndianRupee } from 'lucide-react';
 import TokkriLogo from "./assets/tokkri.jpg";
 const App = () => {
   const [timeLeft, setTimeLeft] = useState({
@@ -28,12 +28,12 @@ const App = () => {
       description: "Maintaining highest standards of cleanliness and food safety"
     },
     {
-      icon: <Scissors className="w-12 h-12" />,
+      icon: <Slice className="w-12 h-12" />,
       title: "Custom Cuts",
       description: "Get your chicken cut exactly the way you want it"
     },
     {
-      icon: <DollarSign className="w-12 h-12" />,
+      icon: <IndianRupee className="w-12 h-12" />,
       title: "Best Prices",
       description: "Premium quality at the most competitive prices in town"
     }
@@ -252,7 +252,7 @@ const App = () => {
                 <div className="flex items-start space-x-3">
                   <Mail className="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" />
                   <div>
-                    <p>alam13.shahbaz@gmail.com</p>
+                    <p>hello@tokkri.in</p>
                   
                   </div>
                 </div>
