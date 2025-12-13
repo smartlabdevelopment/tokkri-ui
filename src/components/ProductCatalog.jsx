@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Package, ShoppingCart } from 'lucide-react';
-import productsData from '../resources/productData.json';
+import productsData from '../resources/ProductData.json';
 
 const ProductCatalog = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
