@@ -1,0 +1,146 @@
+{
+  "premium": {
+    "name": "Premium Cuts",
+    "icon": "🥩",
+    "products": [
+      {
+        "sku": "TKR-BC-250",
+        "name": "Chicken Breast (Boneless Fillet)",
+        "description": "Perfect for gym-goers, steaks, and grilled chicken",
+        "quantities": ["250g", "450g", "1kg"],
+        "bestFor": "High protein, low fat",
+        "category": "premium"
+      },
+      {
+        "sku": "TKR-BT-450",
+        "name": "Chicken Thigh (Boneless)",
+        "description": "Juicier cuts perfect for kebabs and Chinese dishes",
+        "quantities": ["450g", "500g"],
+        "bestFor": "Rich flavor, tender",
+        "category": "premium"
+      },
+      {
+        "sku": "TKR-DS-250",
+        "name": "Chicken Drumsticks (Skinless)",
+        "description": "Kids' favorite, ideal for Tangdi Kabab",
+        "quantities": ["250g (3-4 pcs)", "500g"],
+        "bestFor": "Easy to eat, flavorful",
+        "category": "premium"
+      },
+      {
+        "sku": "TKR-CL-500",
+        "name": "Chicken Lollipop (Frenched)",
+        "description": "Indo-Chinese starters and appetizers",
+        "quantities": ["10-12 pcs (500g)"],
+        "bestFor": "Party appetizers",
+        "category": "premium"
+      },
+      {
+        "sku": "TKR-WG-500",
+        "name": "Chicken Wings (Whole)",
+        "description": "Perfect for BBQ wings and roasted snacks",
+        "quantities": ["500g", "1kg"],
+        "bestFor": "Crispy snacks",
+        "category": "premium"
+      },
+      {
+        "sku": "TKR-WL-2PC",
+        "name": "Chicken Whole Legs",
+        "description": "Tandoori Chicken and roasted leg preparations",
+        "quantities": ["2 pcs (450-500g)"],
+        "bestFor": "Full leg quarters",
+        "category": "premium"
+      }
+    ]
+  },
+  "everyday": {
+    "name": "Everyday Essentials",
+    "icon": "🍛",
+    "products": [
+      {
+        "sku": "TKR-CC-450",
+        "name": "Chicken Curry Cut (Skinless)",
+        "description": "Perfect for daily curries and gravy dishes",
+        "quantities": ["450g", "500g", "1kg"],
+        "bestFor": "Regular cooking",
+        "category": "everyday"
+      },
+      {
+        "sku": "TKR-BC-500",
+        "name": "Chicken Biryani Cut",
+        "description": "Large chunks - 1 leg, 1 breast piece perfect for biryani",
+        "quantities": ["500g", "1kg"],
+        "bestFor": "Biryani & Pulao",
+        "category": "everyday"
+      },
+      {
+        "sku": "TKR-BCC-250",
+        "name": "Boneless Chicken Cubes",
+        "description": "Butter Chicken, Stir-fry, Pasta",
+        "quantities": ["250g", "450g", "500g"],
+        "bestFor": "Quick cooking",
+        "category": "everyday"
+      },
+      {
+        "sku": "TKR-CM-250",
+        "name": "Chicken Mince (Keema)",
+        "description": "Keema matar, Cutlets, Parathas",
+        "quantities": ["250g", "450g", "500g"],
+        "bestFor": "Minced preparations",
+        "category": "everyday"
+      }
+    ]
+  },
+  "specialty": {
+    "name": "Specialty & Offal",
+    "icon": "⭐",
+    "products": [
+      {
+        "sku": "TKR-CL-250",
+        "name": "Chicken Liver",
+        "description": "Iron-rich, great for fry dishes",
+        "quantities": ["250g", "500g"],
+        "bestFor": "High iron content",
+        "category": "specialty"
+      },
+      {
+        "sku": "TKR-CG-250",
+        "name": "Chicken Gizzard",
+        "description": "Chewy texture, popular fry dish",
+        "quantities": ["250g", "500g"],
+        "bestFor": "Unique texture",
+        "category": "specialty"
+      },
+      {
+        "sku": "TKR-CH-250",
+        "name": "Chicken Heart",
+        "description": "Specialty dishes and preparations",
+        "quantities": ["250g"],
+        "bestFor": "Specialty cooking",
+        "category": "specialty"
+      }
+    ]
+  },
+  "premium_special": {
+    "name": "Premium Special",
+    "icon": "👑",
+    "products": [
+      {
+        "sku": "TKR-CC-500",
+        "name": "Country Chicken (Desi Murg)",
+        "description": "Traditional slow-cooked curry preparation",
+        "quantities": ["500g", "1kg"],
+        "bestFor": "Authentic taste",
+        "category": "premium_special"
+      },
+      {
+        "sku": "TKR-KC-1KG",
+        "name": "Kadaknath (Black Chicken)",
+        "description": "Premium health and medicinal properties",
+        "quantities": ["1 Bird (800g-1kg)"],
+        "bestFor": "Health benefits",
+        "category": "premium_special"
+      }
+    ]
+  }
+}
