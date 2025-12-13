@@ -9,7 +9,8 @@
         "description": "Perfect for gym-goers, steaks, and grilled chicken",
         "quantities": ["250g", "450g", "1kg"],
         "bestFor": "High protein, low fat",
-        "category": "premium"
+        "category": "premium",
+        "image": "chicken-breast.jpg"
       },
       {
         "sku": "TKR-BT-450",
@@ -17,7 +18,8 @@
         "description": "Juicier cuts perfect for kebabs and Chinese dishes",
         "quantities": ["450g", "500g"],
         "bestFor": "Rich flavor, tender",
-        "category": "premium"
+        "category": "premium",
+        "image": "chicken-thigh.jpg"
       },
       {
         "sku": "TKR-DS-250",
@@ -25,7 +27,8 @@
         "description": "Kids' favorite, ideal for Tangdi Kabab",
         "quantities": ["250g (3-4 pcs)", "500g"],
         "bestFor": "Easy to eat, flavorful",
-        "category": "premium"
+        "category": "premium",
+        "image": "chicken-drumstick.jpg"
       },
       {
         "sku": "TKR-CL-500",
@@ -33,7 +36,8 @@
         "description": "Indo-Chinese starters and appetizers",
         "quantities": ["10-12 pcs (500g)"],
         "bestFor": "Party appetizers",
-        "category": "premium"
+        "category": "premium",
+        "image": "chicken-lollipop.jpg"
       },
       {
         "sku": "TKR-WG-500",
@@ -41,7 +45,8 @@
         "description": "Perfect for BBQ wings and roasted snacks",
         "quantities": ["500g", "1kg"],
         "bestFor": "Crispy snacks",
-        "category": "premium"
+        "category": "premium",
+        "image": "chicken-wings.jpg"
       },
       {
         "sku": "TKR-WL-2PC",
@@ -49,7 +54,26 @@
         "description": "Tandoori Chicken and roasted leg preparations",
         "quantities": ["2 pcs (450-500g)"],
         "bestFor": "Full leg quarters",
-        "category": "premium"
+        "category": "premium",
+        "image": "chicken-whole-leg.jpg"
+      },
+      {
+        "sku": "TKR-CT-450",
+        "name": "Chicken Tikka",
+        "description": "chicken boneless chunks  for grilling and tikka kababs",
+        "quantities": ["450g", "500g"],
+        "bestFor": "Quick cooking, BBQ",
+        "category": "premium",
+        "image": "chicken-tikka.jpg"
+      },
+      {
+        "sku": "TKR-CS-250",
+        "name": "Chicken Strips",
+        "description": "Tender strips perfect for wraps, salads, and stir-fry",
+        "quantities": ["250g", "450g", "500g"],
+        "bestFor": "Fast meals, kids",
+        "category": "premium",
+        "image": "chicken-strips.jpg"
       }
     ]
   },
@@ -58,12 +82,22 @@
     "icon": "🍛",
     "products": [
       {
+        "sku": "TKR-WC-1KG",
+        "name": "Whole Chicken",
+        "description": "Complete fresh chicken for roasting or cutting as needed",
+        "quantities": ["1 Bird (800g-1.2kg)", "1 Bird (1.2kg-1.5kg)"],
+        "bestFor": "Family meals, roasting",
+        "category": "everyday",
+        "image": "whole-chicken.jpg"
+      },
+      {
         "sku": "TKR-CC-450",
         "name": "Chicken Curry Cut (Skinless)",
         "description": "Perfect for daily curries and gravy dishes",
         "quantities": ["450g", "500g", "1kg"],
         "bestFor": "Regular cooking",
-        "category": "everyday"
+        "category": "everyday",
+        "image": "chicken-curry-cut.jpg"
       },
       {
         "sku": "TKR-BC-500",
@@ -71,7 +105,8 @@
         "description": "Large chunks - 1 leg, 1 breast piece perfect for biryani",
         "quantities": ["500g", "1kg"],
         "bestFor": "Biryani & Pulao",
-        "category": "everyday"
+        "category": "everyday",
+        "image": "chicken-biryani-cut.jpg"
       },
       {
         "sku": "TKR-BCC-250",
@@ -79,7 +114,8 @@
         "description": "Butter Chicken, Stir-fry, Pasta",
         "quantities": ["250g", "450g", "500g"],
         "bestFor": "Quick cooking",
-        "category": "everyday"
+        "category": "everyday",
+        "image": "chicken-cubes.jpg"
       },
       {
         "sku": "TKR-CM-250",
@@ -87,7 +123,8 @@
         "description": "Keema matar, Cutlets, Parathas",
         "quantities": ["250g", "450g", "500g"],
         "bestFor": "Minced preparations",
-        "category": "everyday"
+        "category": "everyday",
+        "image": "chicken-mince.jpg"
       }
     ]
   },
@@ -101,7 +138,8 @@
         "description": "Iron-rich, great for fry dishes",
         "quantities": ["250g", "500g"],
         "bestFor": "High iron content",
-        "category": "specialty"
+        "category": "specialty",
+        "image": "chicken-liver.jpg"
       },
       {
         "sku": "TKR-CG-250",
@@ -109,7 +147,8 @@
         "description": "Chewy texture, popular fry dish",
         "quantities": ["250g", "500g"],
         "bestFor": "Unique texture",
-        "category": "specialty"
+        "category": "specialty",
+        "image": "chicken-gizzard.jpg"
       },
       {
         "sku": "TKR-CH-250",
@@ -117,7 +156,8 @@
         "description": "Specialty dishes and preparations",
         "quantities": ["250g"],
         "bestFor": "Specialty cooking",
-        "category": "specialty"
+        "category": "specialty",
+        "image": "chicken-heart.jpg"
       }
     ]
   },
@@ -131,7 +171,8 @@
         "description": "Traditional slow-cooked curry preparation",
         "quantities": ["500g", "1kg"],
         "bestFor": "Authentic taste",
-        "category": "premium_special"
+        "category": "premium_special",
+        "image": "country-chicken.jpg"
       },
       {
         "sku": "TKR-KC-1KG",
@@ -139,7 +180,8 @@
         "description": "Premium health and medicinal properties",
         "quantities": ["1 Bird (800g-1kg)"],
         "bestFor": "Health benefits",
-        "category": "premium_special"
+        "category": "premium_special",
+        "image": "kadaknath.jpg"
       }
     ]
   }
