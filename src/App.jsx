@@ -3,7 +3,10 @@ import { ChevronLeft, ChevronRight, Phone, Mail, MapPin, Clock, Truck, Shield, S
 import TokkriLogo from "./assets/tokkri_3d_logo.PNG";
 import TokkriTransparentLogo from "./assets/tokkri_icon_transparent.ico";
 import ProductCatalog from './components/ProductCatalog';
-
+import AboutUs from './components/AboutUs';
+import Contact from './components/Contact';
+import SubscriptionPlan from './components/SubscriptionPlan';
+import Services from './components/Services';
 const App = () => {
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
@@ -44,23 +47,9 @@ const App = () => {
     }
   ];
 
-  const services = [
-    {
-      title: "On Demand",
-      description: "Order fresh chicken whenever you need it",
-      icon: "🛒"
-    },
-    {
-      title: "Subscription",
-      description: "Regular deliveries at discounted rates",
-      icon: "📦"
-    },
-    {
-      title: "Bulk Orders",
-      description: "Special pricing for large quantities",
-      icon: "🏪"
-    }
-  ];
+  const handleSubscriptionClick = () => {
+    scrollToSection('subscription');
+  };
 
   useEffect(() => {
     const targetDate = new Date('2026-01-15T00:00:00').getTime();
@@ -165,6 +154,16 @@ const App = () => {
                 Products
               </button>
               <button
+                onClick={() => scrollToSection('subscription')}
+                className={`text-sm font-medium transition ${
+                  activeSection === 'subscription' 
+                    ? 'text-red-600 border-b-2 border-red-600' 
+                    : 'text-gray-700 hover:text-red-600'
+                }`}
+              >
+                Subscription
+              </button>
+              <button
                 onClick={() => scrollToSection('services')}
                 className={`text-sm font-medium transition ${
                   activeSection === 'services' 
@@ -229,6 +228,16 @@ const App = () => {
                 Products
               </button>
               <button
+                onClick={() => scrollToSection('subscription')}
+                className={`block w-full text-left px-4 py-2 rounded-lg transition ${
+                  activeSection === 'subscription' 
+                    ? 'bg-red-600 text-white' 
+                    : 'text-gray-700 hover:bg-gray-100'
+                }`}
+              >
+                Subscription
+              </button>
+              <button
                 onClick={() => scrollToSection('services')}
                 className={`block w-full text-left px-4 py-2 rounded-lg transition ${
                   activeSection === 'services' 
@@ -289,64 +298,13 @@ const App = () => {
         </section>
 
         {/* About Us Section */}
-        <section id="about" className="py-12 sm:py-16 lg:py-20 px-4 bg-white">
-          <div className="max-w-6xl mx-auto">
-            <h3 className="text-3xl sm:text-4xl font-bold text-center text-gray-900 mb-4">
-              About Us
-            </h3>
-            <p className="text-center text-gray-600 mb-12 max-w-3xl mx-auto">
-              We are revolutionizing the way fresh chicken reaches your home
-            </p>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-              <div className="text-center p-6">
-                <div className="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Target className="w-8 h-8 text-red-600" />
-                </div>
-                <h4 className="text-xl font-bold text-gray-900 mb-3">Our Mission</h4>
-                <p className="text-gray-600">
-                  To provide the freshest, highest quality chicken with unmatched convenience and customer service to every household.
-                </p>
-              </div>
-
-              <div className="text-center p-6">
-                <div className="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Users className="w-8 h-8 text-red-600" />
-                </div>
-                <h4 className="text-xl font-bold text-gray-900 mb-3">Our Team</h4>
-                <p className="text-gray-600">
-                  A dedicated team of food safety experts, logistics professionals, and customer service specialists committed to excellence.
-                </p>
-              </div>
-
-              <div className="text-center p-6">
-                <div className="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Award className="w-8 h-8 text-red-600" />
-                </div>
-                <h4 className="text-xl font-bold text-gray-900 mb-3">Our Promise</h4>
-                <p className="text-gray-600">
-                  Farm-to-table freshness, strict hygiene standards, and reliable delivery - that's our guarantee to you.
-                </p>
-              </div>
-            </div>
-
-            <div className="bg-gradient-to-br from-red-50 to-orange-50 rounded-xl p-8 sm:p-12">
-              <h4 className="text-2xl font-bold text-gray-900 mb-4">Our Story</h4>
-              <p className="text-gray-700 mb-4">
-                TOKKRI was born from a simple observation: families deserve access to fresh, high-quality chicken without compromising on hygiene or convenience. We saw the challenges people faced - unpredictable quality at local markets, concerns about freshness, and the hassle of transportation.
-              </p>
-              <p className="text-gray-700 mb-4">
-                We partnered with trusted poultry farms that follow the highest standards of animal welfare and food safety. Our state-of-the-art processing facility ensures that every cut meets stringent quality checks before it reaches your doorstep.
-              </p>
-              <p className="text-gray-700">
-                Today, we're building something more than just a delivery service - we're creating a community of people who value quality, health, and convenience. Join us on this journey to redefine fresh food delivery.
-              </p>
-            </div>
-          </div>
-        </section>
+        <AboutUs />
 
         {/* Products Catalog - Imported Component */}
         <ProductCatalog />
+
+        {/* Subscription Plan - Imported Component */}
+        <SubscriptionPlan />
 
         {/* Features Carousel */}
         <section className="py-12 sm:py-16 bg-white">
@@ -399,83 +357,11 @@ const App = () => {
         </section>
 
         {/* Our Services */}
-        <section id="services" className="py-12 sm:py-16 lg:py-20 px-4 bg-gradient-to-br from-orange-50 to-red-50">
-          <div className="max-w-6xl mx-auto">
-            <h3 className="text-2xl sm:text-3xl font-bold text-center text-gray-900 mb-8 sm:mb-12">
-              Our Services
-            </h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-              {services.map((service, index) => (
-                <div
-                  key={index}
-                  className="bg-white rounded-xl shadow-lg p-6 sm:p-8 hover:shadow-2xl transition transform hover:-translate-y-2 border border-gray-100"
-                >
-                  <div className="text-4xl sm:text-5xl mb-4">{service.icon}</div>
-                  <h4 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3">
-                    {service.title}
-                  </h4>
-                  <p className="text-sm sm:text-base text-gray-600">
-                    {service.description}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+        <Services onSubscriptionClick={handleSubscriptionClick} />
       </main>
 
       {/* Footer */}
-      <footer id="contact" className="bg-gray-900 text-white py-8 sm:py-12 px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-8">
-            <div>
-              <h4 className="font-bold text-lg mb-4">TOKKRI</h4>
-              <p className="text-gray-400 text-sm">
-                Premium quality chicken delivered fresh to your doorstep
-              </p>
-            </div>
-            
-            <div>
-              <h4 className="font-bold text-lg mb-4">Contact Us</h4>
-              <div className="space-y-3 text-sm">
-                <div className="flex items-start space-x-3">
-                  <Phone className="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" />
-                  <div>
-                    <p>+91 9044521514</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div>
-              <h4 className="font-bold text-lg mb-4">Email</h4>
-              <div className="space-y-3 text-sm">
-                <div className="flex items-start space-x-3">
-                  <Mail className="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" />
-                  <div>
-                    <p>hello@tokkri.in</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div>
-              <h4 className="font-bold text-lg mb-4">Address</h4>
-              <div className="flex items-start space-x-3 text-sm">
-                <MapPin className="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" />
-                <p className="text-gray-400">
-                  Kanpur, Uttar Pradesh<br />
-                  India - 208025
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className="border-t border-gray-800 pt-6 sm:pt-8 text-center text-sm text-gray-400">
-            <p>&copy; 2025 TOKKRI. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
+      <Contact />
     </div>
   );
 };
