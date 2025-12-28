@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight, Phone, Mail, MapPin, Clock, Truck, Shield, Slice, IndianRupee, Menu, X, Target, Users, Award } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Phone, Mail, MapPin, Clock, Truck, Shield, Slice, IndianRupee, Menu, X, Target, Users, Award ,Bell} from 'lucide-react';
 import TokkriLogo from "./assets/tokkri_3d_logo.PNG";
 import TokkriTransparentLogo from "./assets/tokkri_icon_transparent.ico";
 import ProductCatalog from './components/ProductCatalog';
@@ -7,6 +7,10 @@ import AboutUs from './components/AboutUs';
 import Contact from './components/Contact';
 import SubscriptionPlan from './components/SubscriptionPlan';
 import Services from './components/Services';
+import NotifyMe from './components/NotifyMe';
+
+// In your App component, add before footer:
+
 const App = () => {
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
@@ -18,7 +22,7 @@ const App = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
-
+  const [isNotifyModalOpen, setIsNotifyModalOpen] = useState(false);
   const features = [
     {
       icon: <Clock className="w-12 h-12" />,
@@ -90,7 +94,16 @@ const App = () => {
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + features.length) % features.length);
   };
+  const openNotifyModal = () => {
+    setIsNotifyModalOpen(true);
+    setMobileMenuOpen(false);
+    document.body.style.overflow = 'hidden'; // Prevent background scrolling
+  };
 
+  const closeNotifyModal = () => {
+    setIsNotifyModalOpen(false);
+    document.body.style.overflow = 'unset'; // Restore scrolling
+  };
   const scrollToSection = (sectionId) => {
     setActiveSection(sectionId);
     setMobileMenuOpen(false);
@@ -101,7 +114,7 @@ const App = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-gradient-to-br from-orange-50 to-red-50">
+    <div className="min-h-screen flex flex-col bg-gradient-to-br from-red-50 to-red-50">
       {/* Header */}
       <header className="bg-white shadow-md sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
@@ -183,6 +196,13 @@ const App = () => {
               >
                 Contact
               </button>
+              <button 
+                              onClick={openNotifyModal}
+                              className="bg-red-600 text-white px-4 py-2 rounded-full hover:bg-red-700 transition flex items-center space-x-2 shadow-md"
+                            >
+                              <Bell size={18} />
+                              <span>Notify Me</span>
+                            </button>
             </nav>
 
             {/* Mobile Menu Button */}
@@ -305,6 +325,7 @@ const App = () => {
 
         {/* Subscription Plan - Imported Component */}
         <SubscriptionPlan />
+        
 
         {/* Features Carousel */}
         <section className="py-12 sm:py-16 bg-white">
@@ -314,7 +335,7 @@ const App = () => {
             </h3>
             
             <div className="relative">
-              <div className="overflow-hidden rounded-xl shadow-2xl bg-gradient-to-br from-red-500 to-orange-500 p-8 sm:p-12">
+              <div className="overflow-hidden rounded-xl shadow-2xl bg-gradient-to-br from-red-500 to-red-500 p-8 sm:p-12">
                 <div className="text-white text-center">
                   <div className="flex justify-center mb-6">
                     {features[currentSlide].icon}
@@ -359,7 +380,38 @@ const App = () => {
         {/* Our Services */}
         <Services onSubscriptionClick={handleSubscriptionClick} />
       </main>
-
+       {/* Floating Action Button */}
+      <button
+        onClick={openNotifyModal}
+        className="fixed bottom-6 right-6 bg-red-600 text-white p-4 rounded-full shadow-2xl hover:bg-red-700 hover:scale-110 transition-all duration-300 z-40 animate-bounce"
+        aria-label="Get Notified"
+      >
+        <Bell size={28} />
+      </button>
+ {/* Notify Me Modal - Only render when open */}
+      {isNotifyModalOpen && (
+        <div 
+          className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-[9999] p-4 overflow-y-auto"
+          onClick={closeNotifyModal}
+        >
+          <div 
+            className="bg-white rounded-2xl shadow-2xl max-w-2xl w-full my-8 relative"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              onClick={closeNotifyModal}
+              className="absolute top-4 right-4 text-gray-500 hover:text-gray-700 hover:bg-gray-100 rounded-full p-1 z-10 transition"
+              aria-label="Close"
+            >
+              <X size={24} />
+            </button>
+            
+            <div className="max-h-[85vh] overflow-y-auto">
+              <NotifyMe onClose={closeNotifyModal} />
+            </div>
+          </div>
+        </div>
+      )}
       {/* Footer */}
       <Contact />
     </div>
