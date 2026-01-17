@@ -56,7 +56,7 @@ const App = () => {
   };
 
   useEffect(() => {
-    const targetDate = new Date('2026-01-15T00:00:00').getTime();
+    const targetDate = new Date('2026-02-15T00:00:00').getTime();
     
     const updateTimer = () => {
       const now = Date.now();
