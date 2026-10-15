@@ -12,13 +12,6 @@ import NotifyMe from './components/NotifyMe';
 // In your App component, add before footer:
 
 const App = () => {
-  const [timeLeft, setTimeLeft] = useState({
-    days: 0,
-    hours: 0,
-    minutes: 0,
-    seconds: 0
-  });
-  
   const [currentSlide, setCurrentSlide] = useState(0);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
@@ -54,31 +47,6 @@ const App = () => {
   const handleSubscriptionClick = () => {
     scrollToSection('subscription');
   };
-
-  useEffect(() => {
-    const targetDate = new Date('2026-02-15T00:00:00').getTime();
-    
-    const updateTimer = () => {
-      const now = Date.now();
-      const distance = targetDate - now;
-
-      if (distance < 0) {
-        setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
-        return;
-      }
-
-      setTimeLeft({
-        days: Math.floor(distance / (1000 * 60 * 60 * 24)),
-        hours: Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
-        minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
-        seconds: Math.floor((distance % (1000 * 60)) / 1000)
-      });
-    };
-
-    updateTimer();
-    const timer = setInterval(updateTimer, 1000);
-    return () => clearInterval(timer);
-  }, []);
 
   useEffect(() => {
     const slideTimer = setInterval(() => {
@@ -301,19 +269,6 @@ const App = () => {
               Fresh chicken delivered to your doorstep. Get ready for the best quality!
             </p>
 
-            {/* Countdown Timer */}
-            <div className="grid grid-cols-4 gap-2 sm:gap-4 max-w-2xl mx-auto mb-12 sm:mb-16">
-              {Object.entries(timeLeft).map(([unit, value]) => (
-                <div key={unit} className="bg-white rounded-lg shadow-lg p-3 sm:p-6">
-                  <div className="text-3xl sm:text-4xl lg:text-5xl font-bold text-red-600">
-                    {value.toString().padStart(2, '0')}
-                  </div>
-                  <div className="text-xs sm:text-sm text-gray-600 capitalize mt-1 sm:mt-2">
-                    {unit}
-                  </div>
-                </div>
-              ))}
-            </div>
           </div>
         </section>
 
